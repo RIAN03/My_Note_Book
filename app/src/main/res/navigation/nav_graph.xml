@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment3">
+
+    <fragment
+        android:id="@+id/homeFragment3"
+        android:name="com.example.mynotebook.ui.Fragments.HomeFragment"
+        android:label="My Notes Book"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment3_to_editNotesFragment3"
+            app:destination="@id/editNotesFragment3" />
+        <action
+            android:id="@+id/action_homeFragment3_to_createNoteFragment3"
+            app:destination="@id/createNoteFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNoteFragment3"
+        android:name="com.example.mynotebook.ui.Fragments.CreateNoteFragment"
+        android:label="Add new Notes"
+        tools:layout="@layout/fragment_create_note" >
+        <action
+            android:id="@+id/action_createNoteFragment3_to_homeFragment3"
+            app:destination="@id/homeFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/editNotesFragment3"
+        android:name="com.example.mynotebook.ui.Fragments.EditNotesFragment"
+        android:label="Edit Notes"
+        tools:layout="@layout/fragment_edit_notes" >
+        <action
+            android:id="@+id/action_editNotesFragment3_to_homeFragment3"
+            app:destination="@id/homeFragment3" />
+        <fragment
+            android:id="@+id/destination_fragment"
+            android:name="com.example.mynotebook.entity.Notes">
+
+            <argument
+                android:name="customArg"
+                app:argType="string" />
+        </fragment>
+
+        <argument
+            android:name="notesArg"
+            app:argType="com.example.mynotebook.entity.Notes" />
+
+    </fragment>
+
+</navigation>
