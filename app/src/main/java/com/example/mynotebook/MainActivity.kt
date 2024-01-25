@@ -8,9 +8,10 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.mynotebook.databinding.ActivityMainBinding
 
+
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding:ActivityMainBinding
+    lateinit var binding: ActivityMainBinding
     lateinit var navController:NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {

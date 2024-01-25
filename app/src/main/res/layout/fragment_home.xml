@@ -37,8 +37,8 @@
                 android:text="High"
                 android:textColor="@color/red_col"
                 android:background="@drawable/btn_filter_shape"
-                android:paddingStart="30dp"
-                android:paddingEnd="30dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:layout_marginStart="5dp"/>
@@ -51,8 +51,8 @@
                 android:text="Medium"
                 android:textColor="@color/yellow_col"
                 android:background="@drawable/btn_filter_shape"
-                android:paddingStart="30dp"
-                android:paddingEnd="30dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:layout_marginStart="5dp"/>
@@ -65,8 +65,8 @@
                 android:text="Low"
                 android:textColor="@color/green_col"
                 android:background="@drawable/btn_filter_shape"
-                android:paddingStart="30dp"
-                android:paddingEnd="30dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:layout_marginStart="5dp"/>

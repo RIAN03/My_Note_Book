@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import com.example.mynotebook.R
@@ -14,6 +15,7 @@ import com.example.mynotebook.ViewModel.NotesViewModel
 import com.example.mynotebook.databinding.FragmentEditNotesBinding
 import com.example.mynotebook.entity.Notes
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import kotlinx.coroutines.launch
 import java.util.*
 
 
@@ -117,6 +119,10 @@ class EditNotesFragment : Fragment() {
             textviewYes?.setOnClickListener {
                 viewModel.deleteNotes(oldNotes.notesArg.id!!)
                 //Navigation.findNavController(it!!).navigate(R.id.action_editNotesFragment3_to_homeFragment3)//problem
+                viewLifecycleOwner.lifecycleScope.launch {
+                    Navigation.findNavController(requireView())
+                        .navigate(R.id.action_editNotesFragment3_to_homeFragment3)
+                }
                 bottomSheet.dismiss()
             }
 
